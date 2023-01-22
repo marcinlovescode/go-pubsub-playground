@@ -1,0 +1,7 @@
+version: "3.8"
+services:   
+  pub-sub-emulator:
+    image: google/cloud-sdk:414.0.0
+    command: ["gcloud", "beta", "emulators", "pubsub", "start", "--host-port=0.0.0.0:8085", "--project=pubsubgo"]
+    ports:
+      - "8085:8085"
